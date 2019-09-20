@@ -1,0 +1,11 @@
+/* for loop testing
+*/
+
+x : int
+
+main :: {
+  for x = get(int), x < 5, x++ {
+    put("loop ") put(x) put('\n')
+  }
+  put("done\n")
+}

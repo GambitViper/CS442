@@ -1,0 +1,26 @@
+/* increment decrement testing
+*/
+
+x : int
+
+rec : () -> void
+
+rec :: {
+  put("enter x = ") put(x) put("\n")
+  x-- //replaced with decrement
+  if x ## 0 {
+    rec()
+  }
+  else {
+    put("      x = 0\n")
+  }
+  x++ //replaced with increment
+  put("exit  x = ") put(x) put("\n")
+}
+
+main :: {
+  put("> ")
+  x = get(int)
+  rec()
+  put("done\n")
+}
